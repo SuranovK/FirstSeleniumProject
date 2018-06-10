@@ -10,6 +10,17 @@ public class SeleniumDemo {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://google.com");
+		String expected = "Google";
+		String actual = driver.getTitle();
+		if(expected.equals(actual)) {
+			System.out.println("passed");
+		}else {
+			System.out.println("failed");
+		}
+		System.out.println("expected: \t" + expected);
+		System.out.println("actual: \t" + actual);
+		
+		
 	}
 	
 
