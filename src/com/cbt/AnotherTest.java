@@ -1,5 +1,7 @@
 package com.cbt;
 
+import java.util.prefs.BackingStoreException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -10,14 +12,16 @@ public class AnotherTest {
 				"/Users/nasyikatiusupova/Documents/selenium dependencies/drivers/chromedriver");
 		
 		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("http://learn.cybertekschool.com/login/canvas");
-		
+		driver.navigate().to("http://google.com");
+			
 		String expected = "cybertekschool jdd";
 		String actual = driver.getCurrentUrl();
 		if(actual.contains(expected)) {
 		System.out.println("passed");
 	}else {
 		System.out.println("failed");
+		
+		
 		
 	
 	System.out.println("expected: \t" + expected);
@@ -26,6 +30,7 @@ public class AnotherTest {
 	Thread.sleep(10000);	
 	 driver.close();
 		
+	 
 
 	}
 
